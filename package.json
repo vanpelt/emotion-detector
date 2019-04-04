@@ -1,11 +1,15 @@
 {
-  "name": "smile-cam",
+  "name": "emotion-detector",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@tensorflow/tfjs-node": "^1.0.2",
+    "face-api.js": "^0.19.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "2.1.8"
+    "react-live": "^2.0.0",
+    "react-scripts": "2.1.8",
+    "react-webcam": "^1.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
