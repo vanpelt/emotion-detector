@@ -16,12 +16,9 @@ class App extends Component {
    * Load the face detector and smile models
    */
   async componentDidMount() {
-    this.tinyFace = await faceapi.loadTinyFaceDetectorModel(
-      process.env.PUBLIC_URL + "models"
-    );
-    this.smileDetector = await tf.loadLayersModel(
-      process.env.PUBLIC_URL + "models/model.json"
-    );
+    const base = window.BASE_URL || process.env.PUBLIC_URL;
+    this.tinyFace = await faceapi.loadTinyFaceDetectorModel(base + "models");
+    this.smileDetector = await tf.loadLayersModel(base + "models/model.json");
     const tensor = await extractFaceAndCrop(this.getInput());
     this.smileDetector.predict(tensor);
     this.setState({ loading: false });

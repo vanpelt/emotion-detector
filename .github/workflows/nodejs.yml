@@ -19,7 +19,6 @@ jobs:
           zip frontend.zip -r build
         env:
           CI: true
-          PUBLIC_URL: https://localhost:8000
       - name: Upload Release Asset
         uses: svenstaro/upload-release-action@v1-release
         with:
