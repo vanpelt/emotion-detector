@@ -17,7 +17,7 @@ class App extends Component {
    */
   async componentDidMount() {
     this.tinyFace = await faceapi.loadTinyFaceDetectorModel(
-      process.env.PUBLIC_URL + "/models"
+      process.env.PUBLIC_URL + "models"
     );
     this.smileDetector = await tf.loadLayersModel(
       process.env.PUBLIC_URL + "models/model.json"

@@ -15,15 +15,16 @@ jobs:
       - name: npm install, build, and test
         run: |
           npm ci
-          PUBLIC_URL=https://localhost:8000 npm run build --if-present
+          npm run build --if-present
           zip frontend.zip -r build
         env:
           CI: true
+          PUBLIC_URL: https://localhost:8000
       - name: Upload Release Asset
         uses: svenstaro/upload-release-action@v1-release
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: frontend.zip
           asset_name: frontend.zip
-          tag: ${{ github.ref }}
+          tag: stable
           overwrite: true
