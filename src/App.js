@@ -84,10 +84,10 @@ class App extends Component {
     }
   }
 
-  async uploadImage() {
-    const imgFile = this.upload.current.files[0];
-    //const img = await faceapi.bufferToImage(imgFile);
-  }
+  /*async uploadImage() {
+    this.upload.current.files[0];
+    await faceapi.bufferToImage(imgFile);
+  }*/
 
   getInput() {
     let input = this.webcam.current.getCanvas();
