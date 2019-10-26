@@ -16,5 +16,25 @@ jobs:
       run: |
         npm ci
         npm run build --if-present
+        zip frontend.zip -r build
       env:
         CI: true
+    - name: Create Release
+        if: false
+        id: create_release
+        uses: actions/create-release@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Frontend release
+          draft: false
+          prerelease: false
+    - name: Upload Release Asset
+      uses: svenstaro/upload-release-action@v1-release
+      with:
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        file: frontend.zip
+        asset_name: frontend.zip
+        tag: ${{ github.ref }}
+        overwrite: true

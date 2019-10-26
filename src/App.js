@@ -86,7 +86,7 @@ class App extends Component {
 
   async uploadImage() {
     const imgFile = this.upload.current.files[0];
-    const img = await faceapi.bufferToImage(imgFile);
+    //const img = await faceapi.bufferToImage(imgFile);
   }
 
   getInput() {
@@ -118,7 +118,7 @@ class App extends Component {
       });
       this.state.results.forEach((r, i) =>
         results.push(
-          <li key={i} className={i == bestIdx ? "best" : ""}>
+          <li key={i} className={i === bestIdx ? "best" : ""}>
             {this.labels[i]}: {Math.round(r * 10000) / 100}%
           </li>
         )

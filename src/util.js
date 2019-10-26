@@ -1,6 +1,7 @@
 import * as faceapi from "face-api.js";
 import * as tf from "@tensorflow/tfjs";
 
+/*
 const cropImage = img => {
   const size = Math.min(img.shape[0], img.shape[1]);
   const centerHeight = img.shape[0] / 2;
@@ -8,7 +9,7 @@ const cropImage = img => {
   const centerWidth = img.shape[1] / 2;
   const beginWidth = centerWidth - size / 2;
   return img.slice([beginHeight, beginWidth, 0], [size, size, 3]);
-};
+};*/
 
 /**
  * Extract a face from an image given raw input and a
