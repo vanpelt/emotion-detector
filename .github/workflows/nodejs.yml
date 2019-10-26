@@ -25,5 +25,5 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: frontend.zip
           asset_name: frontend.zip
-          tag: ${{ github.ref[11:] }}
+          tag: ${{ github.ref }}
           overwrite: true
