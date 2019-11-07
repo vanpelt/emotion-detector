@@ -1,10 +1,10 @@
 # Emotion Detector
 
-Teaching a machine to feel...
+Teaching a machine to feel :heart:
 
 ## How it works
 
-This UI depends on a trained [tensorflowjs](https://www.tensorflow.org/js) model that outputs 7 logits. "Angry", "Disgust", "Fear", "Happy", "Sad", "Surprise", and "Neutral" are the emotions we assume this network can feel.
+This UI depends on a trained [tensorflowjs](https://www.tensorflow.org/js) model that outputs 7 logits. `["Angry", "Disgust", "Fear", "Happy", "Sad", "Surprise", "Neutral"]` are the emotions we assume this network can feel.
 
 ## Quickstart
 
